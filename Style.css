@@ -1,0 +1,730 @@
+/* --- Core Styles & Typography --- */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section Wrapper */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+/* Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 4.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #e0e0e0;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #8a8a93;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Links & Icons */
+.contact-links a {
+    color: #a1a1aa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-links a:hover {
+    color: #ffffff;
+}
+
+/* Call to Action Button */
+.btn-explore {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: none;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-explore:hover {
+    background-color: #1d4ed8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- Background Floating Elements --- */
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cube {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    animation: floatAnimation 8s infinite ease-in-out;
+    transition: margin 0.1s ease-out;
+    /* Smooths out the JS parallax tracking */
+}
+
+/* Individual placements and 3D rotation variations */
+.cube-1 {
+    top: 20%;
+    left: 10%;
+    --rx: 20deg;
+    --ry: -35deg;
+}
+
+.cube-2 {
+    top: 15%;
+    right: 15%;
+    --rx: -15deg;
+    --ry: 40deg;
+    width: 160px;
+    height: 100px;
+    animation-duration: 9s;
+}
+
+.cube-3 {
+    bottom: 20%;
+    left: 12%;
+    --rx: 35deg;
+    --ry: 20deg;
+    animation-duration: 7s;
+}
+
+.cube-4 {
+    bottom: 25%;
+    right: 10%;
+    --rx: -20deg;
+    --ry: -25deg;
+    animation-duration: 10s;
+}
+
+.cube-5 {
+    top: 5%;
+    left: 45%;
+    --rx: 45deg;
+    --ry: 10deg;
+    width: 90px;
+    height: 70px;
+    opacity: 0.6;
+    animation-duration: 6s;
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0) rotateX(var(--rx)) rotateY(var(--ry));
+    }
+
+    50% {
+        transform: translateY(-20px) rotateX(calc(var(--rx) + 10deg)) rotateY(calc(var(--ry) - 10deg));
+    }
+}
+
+/* Responsive scaling for mobile devices */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .cube {
+        width: 90px;
+        height: 60px;
+    }
+
+    .cube-5 {
+        display: none;
+    }
+
+    /* Hide extra noise on small viewports */
+}
+
+/* --- About Me & Skills Section Styles --- */
+.about-skills-section {
+    background-color: #0b0f19;
+    /* Subtle deep-blue shade tint for background variation */
+    position: relative;
+    z-index: 5;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* About Banner Container Styling */
+.about-banner-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.about-banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark atmospheric vignette filter overlay on top of workspace image */
+.about-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(11, 15, 25, 0.2) 0%, rgba(11, 15, 25, 0.8) 100%);
+    pointer-events: none;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    max-width: 850px;
+    font-weight: 400;
+}
+
+/* Frosted Grid Skill Cards */
+.skill-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+/* Card Individual Colored Accent Tints */
+.text-frontend {
+    color: #60a5fa;
+}
+
+.text-backend {
+    color: #4ade80;
+}
+
+.text-cloud {
+    color: #facc15;
+}
+
+.text-styling {
+    color: #c084fc;
+}
+
+.text-dev {
+    color: #2dd4bf;
+}
+
+.text-tools {
+    color: #fb923c;
+}
+
+/* Custom Skill Bullets Layout */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.skill-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    /* Blue indicator dots */
+    font-weight: bold;
+}
+
+/* Get in Touch Button Styling */
+.btn-get-in-touch {
+    background-color: #2563eb;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-get-in-touch:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.03);
+}
+
+/* --- Technical Skills Section Styles --- */
+.technical-skills-section {
+    background-color: #080c14;
+    /* Deep, atmospheric dark background color match */
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.tech-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.tech-section-subtitle {
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #94a3b8 !important;
+}
+
+/* Row card item block wrapper structure */
+.tech-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 1.75rem;
+    height: 100%;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.tech-card:hover {
+    background: rgba(30, 41, 59, 0.4);
+    border-color: rgba(59, 130, 246, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Glassmorphic box containers housing icon styles */
+.tech-icon-wrapper {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    color: #3b82f6;
+    border-radius: 8px;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.tech-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    margin-top: 2px;
+}
+
+.tech-card-text {
+    font-size: 0.925rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Screen adaptation breakpoints configurations */
+@media (max-width: 768px) {
+    .tech-section-title {
+        font-size: 2rem;
+    }
+
+    .tech-card {
+        padding: 1.25rem;
+    }
+}
+
+
+/* --- Experience Section Styles --- */
+.experience-section {
+    background-color: #0b0f19;
+    /* Alternating background depth layout */
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    position: relative;
+}
+
+.exp-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+/* Master Experience Card Styling */
+.experience-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Brand Icon Wrapper Box */
+.company-icon-wrapper {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    color: #3b82f6;
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.job-role {
+    font-size: 0.95rem;
+    font-family: monospace;
+    /* Mimics the HTML tag layout look (<>) */
+    color: #94a3b8 !important;
+}
+
+/* Custom Chrono-Badge Container */
+.date-badge {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Precise Achievement Bullets Layout */
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.achievement-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Circular Filled Blue Arrow Vectors */
+.check-icon {
+    color: #2563eb;
+    font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Responsive Adaptive Viewport Tweaks */
+@media (max-width: 576px) {
+    .experience-card {
+        padding: 1.5rem;
+    }
+
+    .company-name {
+        font-size: 1.25rem;
+    }
+
+    .exp-section-title {
+        font-size: 2rem;
+    }
+}
+
+/* --- Featured Projects Section Styles --- */
+.featured-projects-section {
+    background-color: #080c14;
+    /* Alternates back to matching deep dark canvas theme */
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.project-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+/* Master Grid Item Card Container Styling */
+.project-showcase-card {
+    background: rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Image Visual Preview Display Frame */
+.project-preview-frame {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+    width: 100%;
+    height: 300px;
+    /* object-fit: cover; */
+    display: block;
+}
+
+/* Card Content Details Typography */
+.project-name {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #60a5fa;
+    /* Vibrant blue contrast link hue */
+}
+
+.project-tech-stack {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #475569;
+    letter-spacing: 0.05em;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* Custom Tag Pill Styling */
+.badge-pill {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 1.1rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+/* Pill Palette Variations matching the asset reference colors */
+.pill-blue {
+    background: rgba(30, 58, 138, 0.3);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.pill-purple {
+    background: rgba(88, 28, 135, 0.25);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.pill-green {
+    background: rgba(20, 83, 45, 0.25);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Action Outbound Anchors Styling */
+.project-action-link a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.project-action-link a:hover {
+    color: #ffffff;
+}
+
+/* Adaptive Breakpoint Updates */
+@media (max-width: 992px) {
+    .project-showcase-card {
+        padding: 1.75rem;
+    }
+
+    .project-name {
+        font-size: 1.5rem;
+    }
+
+    .project-section-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* --- Education, Certification & Footer Styles --- */
+.education-certification-section {
+    background-color: #0b0f19;
+    /* Maintains alternating deep canvas block palette styling */
+    padding-top: 4rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.section-block-title {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Custom Purple Accent Icon Mapping */
+.text-purple {
+    color: #c084fc !important;
+}
+
+/* Base structural layout for inner component cards */
+.edu-cert-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.edu-cert-card:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.card-headline {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.card-subtext {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Crisp Green Certification Grade Pill */
+.status-badge-green {
+    background-color: rgba(20, 83, 45, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+/* Footer Container Grid Configurations */
+.portfolio-footer {
+    background-color: #080c14;
+    /* Deep dark border foundation blend line */
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-copyright-text {
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 400;
+}
+
+/* Responsive Scaling Breakpoints Override configuration */
+@media (max-width: 768px) {
+    .section-block-title {
+        font-size: 1.5rem;
+    }
+
+    .edu-cert-card {
+        padding: 1.5rem;
+    }
+
+    .card-headline {
+        font-size: 1.15rem;
+    }
+}
