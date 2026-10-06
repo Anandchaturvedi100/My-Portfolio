@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Kumar Chaturvedi - Portfolio</title>
+    <title>Anand Kumar Chaturvedi - Full Stack Developer (React, Node.js)</title>
+    <meta name="description"
+        content="Portfolio of Anand Kumar Chaturvedi, a Full Stack Developer from Bangalore skilled in React.js, Redux, Node.js and Express.js.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <section class="hero-section">
@@ -17,27 +22,31 @@
             <div class="cube cube-1"></div>
             <div class="cube cube-2"></div>
             <div class="cube cube-3"></div>
-            <div class="cube cube-4"></div>`
+            <div class="cube cube-4"></div>
             <div class="cube cube-5"></div>
         </div>
 
         <div class="container text-center hero-content">
-
             <h1 class="hero-title mb-3">Hi, I’m Anand Kumar <br> Chaturvedi</h1>
-            <h2 class="hero-subtitle mb-3">Frontend Developer | Building Responsive & Dynamic Web Experiences.</h2>
-            <p class="hero-description mb-5">Delivering responsive, user-friendly web experiences with a strong
-                foundation in modern frontend technologies. Passionate about writing clean code, solving UI challenges,
-                and continuously learning to build scalable digital products.</p>
+            <h2 class="hero-subtitle mb-2">Full Stack Developer | React.js, Node.js &amp; Express.js</h2>
+            <p class="mb-3"><i class="bi bi-geo-alt"></i> Bangalore, Karnataka, India</p>
+            <p class="hero-description mb-5">I build responsive, user-friendly web applications end to end: React
+                frontends, Node.js/Express REST APIs, and cloud deployment. Passionate about clean code, solving real
+                problems and continuously learning to build scalable products.</p>
 
             <div class="contact-links d-flex flex-wrap justify-content-center gap-4 mb-5">
                 <a href="mailto:anandkumar78752@gmail.com"><i class="bi bi-envelope"></i> Email</a>
                 <a href="tel:6260915754"><i class="bi bi-telephone"></i> Call</a>
-                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-                <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                <a href="resume/My Resume.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> Resume</a>
+                <a href="https://github.com/Anandchaturvedi100" target="_blank" rel="noopener"><i
+                        class="bi bi-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/anand-kumar-chaturvedi/" target="_blank" rel="noopener"><i
+                        class="bi bi-linkedin"></i> LinkedIn</a>
+                <a href="resume/AnandChaturvedi.pdf" target="_blank" rel="noopener"><i
+                        class="bi bi-file-earmark-text"></i> Resume</a>
             </div>
-            <div>
-                <a href="#Projects"><button id="exploreBtn" class="btn btn-explore">Explore Projects</button></a>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#Projects" id="exploreBtn" class="btn btn-explore">Explore Projects</a>
+                <a href="resume/AnandChaturvedi.pdf" download class="btn btn-explore">Download Resume</a>
             </div>
         </div>
     </section>
@@ -54,15 +63,17 @@
                 <div class="col-lg-10">
                     <div class="about-banner-container mb-4">
                         <div class="about-banner-overlay"></div>
+                        <!-- TODO: apni photo ya project screenshot se replace karo -->
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
                             alt="Workspace Showcase" class="img-fluid about-banner-img">
                     </div>
                     <p class="about-description text-center mx-auto">
-                        Passionate Frontend Developer dedicated to building responsive, high-performance web
-                        applications. Equipped with a strong foundation in modern web technologies like React,
-                        JavaScript, HTML, and CSS, along with exposure to backend concepts using Node.js. Enthusiastic
-                        about writing clean, maintainable code, solving user interface challenges, and collaborating
-                        with teams to deliver outstanding digital experiences.
+                        Full Stack Developer with practical experience in React.js, Redux, JavaScript (ES6+), HTML5,
+                        CSS3, Bootstrap, Node.js and Express.js. Skilled in building responsive, mobile-first
+                        single-page applications using reusable components, and in developing RESTful APIs and
+                        integrating them with frontend applications. Comfortable with Git/GitHub, component-based
+                        architecture and deploying apps on Vercel and Render. Eager to contribute full stack skills and
+                        keep growing as a professional developer.
                     </p>
                 </div>
             </div>
@@ -76,13 +87,25 @@
                         <ul class="skill-list">
                             <li>React.js</li>
                             <li>Redux</li>
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>HTML5/CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5 / CSS3</li>
                         </ul>
                     </div>
                 </div>
 
+                <div class="col-xl-3 col-md-6">
+                    <div class="skill-card">
+                        <h3 class="skill-card-title d-flex align-items-center gap-2 text-backend">
+                            <i class="bi bi-hdd-network"></i> Backend
+                        </h3>
+                        <ul class="skill-list">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>RESTful APIs</li>
+                            <li>CRUD Operations</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="col-xl-3 col-md-6">
                     <div class="skill-card">
@@ -91,21 +114,9 @@
                         </h3>
                         <ul class="skill-list">
                             <li>Bootstrap</li>
-                            <li>CSS</li>
-                            <li>Styled Components</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="skill-card">
-                        <h3 class="skill-card-title d-flex align-items-center gap-2 text-dev">
-                            <i class="bi bi-code-slash"></i> Development
-                        </h3>
-                        <ul class="skill-list">
-                            <li>Git</li>
-                            <li>REST APIs</li>
-                            <li>Performance Optimization</li>
+                            <li>Tailwind CSS</li>
+                            <li>CSS3</li>
+                            <li>Responsive Design</li>
                         </ul>
                     </div>
                 </div>
@@ -113,21 +124,22 @@
                 <div class="col-xl-3 col-md-6">
                     <div class="skill-card">
                         <h3 class="skill-card-title d-flex align-items-center gap-2 text-tools">
-                            <i class="bi bi-nut"></i> Tools
+                            <i class="bi bi-nut"></i> Tools &amp; Deployment
                         </h3>
                         <ul class="skill-list">
+                            <li>Git / GitHub</li>
                             <li>VS Code</li>
                             <li>Figma</li>
+                            <li>Vercel / Render</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
 
             <div class="text-center mt-5">
-                <button class="btn btn-primary btn-get-in-touch px-4 py-2" id="contactBtn">
+                <a href="#contact" class="btn btn-primary btn-get-in-touch px-4 py-2" id="contactBtn">
                     <i class="bi bi-globe me-2"></i> Get in Touch
-                </button>
+                </a>
             </div>
 
         </div>
@@ -138,79 +150,67 @@
 
             <div class="row justify-content-center mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="tech-section-title mb-2">Technical Skills</h2>
-                    <p class="tech-section-subtitle text-secondary">Leveraging modern technologies and best practices to
-                        build exceptional digital experiences</p>
+                    <h2 class="tech-section-title mb-2">What I Do</h2>
+                    <p class="tech-section-subtitle text-secondary">Modern technologies and best practices to build
+                        clean, maintainable web applications</p>
                 </div>
             </div>
 
             <div class="row g-4">
-
                 <div class="col-lg-4 col-md-6">
                     <div class="tech-card d-flex align-items-start gap-3">
-                        <div class="tech-icon-wrapper">
-                            <i class="bi bi-code"></i>
-                        </div>
+                        <div class="tech-icon-wrapper"><i class="bi bi-code"></i></div>
                         <div>
                             <h3 class="tech-card-title">Frontend Development</h3>
-                            <p class="tech-card-text">Proficient in React.js, building interactive web apps, and modern
-                                JavaScript (ES6+)</p>
+                            <p class="tech-card-text">Building interactive SPAs with React.js, Hooks, reusable
+                                components and modern JavaScript (ES6+).</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="tech-card d-flex align-items-start gap-3">
-                        <div class="tech-icon-wrapper">
-                            <i class="bi bi-aspect-ratio"></i>
-                        </div>
+                        <div class="tech-icon-wrapper"><i class="bi bi-hdd-network"></i></div>
                         <div>
-                            <h3 class="tech-card-title">Responsive Design</h3>
-                            <p class="tech-card-text">Crafting fluid, pixel-perfect layouts using CSS Grid, Flexbox, and
-                                Media Queries to ensure seamless user experiences across all device sizes.</p>
+                            <h3 class="tech-card-title">Backend &amp; REST APIs</h3>
+                            <p class="tech-card-text">Creating RESTful APIs with Node.js and Express.js, with full CRUD
+                                and frontend–backend integration.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="tech-card d-flex align-items-start gap-3">
-                        <div class="tech-icon-wrapper">
-                            <i class="bi bi-database"></i>
-                        </div>
+                        <div class="tech-icon-wrapper"><i class="bi bi-database"></i></div>
                         <div>
                             <h3 class="tech-card-title">State Management</h3>
-                            <p class="tech-card-text">Handling complex component interactions and global application
-                                state using Redux and Context API to ensure clean and maintainable code.</p>
+                            <p class="tech-card-text">Managing global application state with Redux for clean,
+                                predictable and maintainable code.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6">
                     <div class="tech-card d-flex align-items-start gap-3">
-                        <div class="tech-icon-wrapper">
-                            <i class="bi bi-cpu"></i>
-                        </div>
+                        <div class="tech-icon-wrapper"><i class="bi bi-aspect-ratio"></i></div>
                         <div>
-                            <h3 class="tech-card-title">Performance Optimization</h3>
-                            <p class="tech-card-text">Optimizing web performance using modern techniques like React lazy
-                                loading, code-splitting, and asset compression for fast load times.</p>
+                            <h3 class="tech-card-title">Responsive Design</h3>
+                            <p class="tech-card-text">Mobile-first layouts using Flexbox, Grid and media queries that
+                                work across desktop, tablet and mobile.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6">
                     <div class="tech-card d-flex align-items-start gap-3">
-                        <div class="tech-icon-wrapper">
-                            <i class="bi bi-palette"></i>
-                        </div>
+                        <div class="tech-icon-wrapper"><i class="bi bi-palette"></i></div>
                         <div>
-                            <h3 class="tech-card-title">Figma Specialist</h3>
-                            <p class="tech-card-text">Skilled at analyzing Figma design systems and transforming
-                                creative mockups into functional, high-performance HTML/CSS and React code.</p>
+                            <h3 class="tech-card-title">Figma to Code</h3>
+                            <p class="tech-card-text">Converting Figma designs into pixel-perfect, interactive web
+                                pages with HTML/CSS and React.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -226,126 +226,196 @@
                 </div>
             </div>
 
+            <!-- 1. Inventory Nexus -->
             <div class="row justify-content-center mb-4">
                 <div class="col-xl-11">
-
                     <div class="project-showcase-card">
                         <div class="row g-4 align-items-center">
-
                             <div class="col-lg-6">
                                 <div class="project-preview-frame">
-                                    <img src="Images/EMS Project.png"
-                                        alt="EMS project" class="img-fluid project-img">
+                                    <!-- TODO: Images/inventory-nexus.png me screenshot save karo -->
+                                    <img src="Images/inventory-nexus.png" alt="Inventory Nexus"
+                                        class="img-fluid project-img">
                                 </div>
                             </div>
+                            <div class="col-lg-6 ps-lg-4">
+                                <h3 class="project-name mb-2">Inventory Nexus – Full Stack Inventory App</h3>
+                                <div class="project-tech-stack mb-3">React.js • Node.js • Express.js • Cloudinary •
+                                    Vercel • Render</div>
+                                <p class="project-description mb-3">
+                                    Full-stack stock management app with automated low-stock alerts and precise
+                                    rack/box location tracking.
+                                </p>
+                                <ul class="project-description mb-3">
+                                    <li>Complete RESTful CRUD with real-time search and filtering</li>
+                                    <li>Direct image upload to cloud storage via Cloudinary API</li>
+                                    <li>Frontend on Vercel, REST API on Render with secure environment configs</li>
+                                </ul>
+                                <div class="project-badges d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge-pill pill-blue">Full Stack</span>
+                                    <span class="badge-pill pill-purple">REST API</span>
+                                </div>
+                                <div class="project-action-link d-flex flex-wrap gap-4">
+                                    <a href="https://inventory-frontend-alpha-swart.vercel.app/" target="_blank"
+                                        rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Anandchaturvedi100/inventory-frontend" target="_blank"
+                                        rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 2. EMS Dashboard -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-xl-11">
+                    <div class="project-showcase-card">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-6">
+                                <div class="project-preview-frame">
+                                    <img src="Images/ems-project.png" alt="EMS project" class="img-fluid project-img">
+                                </div>
+                            </div>
                             <div class="col-lg-6 ps-lg-4">
                                 <h3 class="project-name mb-2">EMS Dashboard – Employee Management System</h3>
-                                <div class="project-tech-stack mb-3">React( JavaScript ) • Vite • HTML5 • CSS3 • Bootstrap </div>
-
-                                <p class="project-description mb-4 ">
-                                    A dynamic web application designed to streamline employee management, authentication, and administrative tracking. Built
-                                    with React.js and Vite, featuring centralized Redux state management (store.js), modular feature components
-                                    (DashboardOverview.jsx, Employees.jsx, Login.jsx), interactive theme toggling, and clean UI styling with custom CSS.
+                                <div class="project-tech-stack mb-3">React.js • Redux • Vite • CSS3 • Bootstrap</div>
+                                <p class="project-description mb-4">
+                                    A React dashboard for employee management, login authentication and admin
+                                    tracking. Uses Redux for centralized state, modular feature components and an
+                                    interactive theme toggle.
                                 </p>
-
                                 <div class="project-badges d-flex flex-wrap gap-2 mb-4">
                                     <span class="badge-pill pill-blue">Employee Management</span>
                                     <span class="badge-pill pill-purple">React Dashboard</span>
-
                                 </div>
-
-                                <div class="project-action-link">
-                                    <a href="https://ems-dashboard-nine.vercel.app/" target="_blank"
+                                <div class="project-action-link d-flex flex-wrap gap-4">
+                                    <a href="https://ems-dashboard-nine.vercel.app/" target="_blank" rel="noopener"
                                         class="d-inline-flex align-items-center gap-2">
-                                        <i class="bi bi-box-arrow-up-right"></i> Visit Website
+                                        <i class="bi bi-box-arrow-up-right"></i> Live Demo
                                     </a>
+                                    <!-- TODO: yaha EMS ka GitHub repo link add karo -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+            <!-- 3. E-Commerce -->
             <div class="row justify-content-center mb-4">
                 <div class="col-xl-11">
-
                     <div class="project-showcase-card">
                         <div class="row g-4 align-items-center">
-
                             <div class="col-lg-6">
                                 <div class="project-preview-frame">
-                                    <img src="Images/landing page .png"
-                                        alt="landing page" class="img-fluid project-img">
+                                    <img src="Images/landing-page.png" alt="E-commerce landing page"
+                                        class="img-fluid project-img">
                                 </div>
                             </div>
-
                             <div class="col-lg-6 ps-lg-4">
                                 <h3 class="project-name mb-2">E-Commerce Web Application</h3>
-                                <div class="project-tech-stack mb-3">React.js • JavaScript • HTML5 • CSS3 • bootstrap</div>
-
-                                <p class="project-description mb-4 ">
-                                  E-commerce landing page engineered to showcase trending consumer products and promote online store conversion. Features a fully responsive interface developed with modern React component architecture, interactive product discovery cards, call-to-action routing, and continuous integration via GitHub and Vercel.
+                                <div class="project-tech-stack mb-3">React.js • JavaScript • HTML5 • CSS3 • Bootstrap
+                                </div>
+                                <p class="project-description mb-4">
+                                    A responsive e-commerce landing page showcasing trending products, built with
+                                    React component architecture, interactive product cards and call-to-action
+                                    routing. Deployed on Vercel via GitHub.
                                 </p>
-
                                 <div class="project-badges d-flex flex-wrap gap-2 mb-4">
                                     <span class="badge-pill pill-blue">E-Commerce</span>
                                     <span class="badge-pill pill-purple">Responsive Design</span>
-
                                 </div>
-
-                                <div class="project-action-link">
+                                <div class="project-action-link d-flex flex-wrap gap-4">
                                     <a href="https://ecommerce-landing-page-smoky.vercel.app/" target="_blank"
-                                        class="d-inline-flex align-items-center gap-2">
-                                        <i class="bi bi-box-arrow-up-right"></i> Visit Website
+                                        rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-up-right"></i> Live Demo
                                     </a>
+                                    <!-- TODO: yaha E-Commerce ka GitHub repo link add karo -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center ">
+            <!-- 4. Tourism -->
+            <div class="row justify-content-center mb-4">
                 <div class="col-xl-11">
                     <div class="project-showcase-card">
                         <div class="row g-4 align-items-center">
-
                             <div class="col-lg-6">
                                 <div class="project-preview-frame">
-                                    <img src="Images/Tourist management system 1 page image.png"
-                                        alt="Tourism Management System" class="img-fluid project-img">
+                                    <img src="Images/tourism-management.png" alt="Tourism Management System"
+                                        class="img-fluid project-img">
                                 </div>
                             </div>
-
                             <div class="col-lg-6 ps-lg-4">
                                 <h3 class="project-name mb-2">Tourism Management System</h3>
-                                <div class="project-tech-stack mb-3">HTML5 • CSS3 • Bootstrap • JavaScript</div>
-
-                                <p class="project-description mb-4 ">
-                                    A dynamic travel and tourism website built to showcase holiday packages and
-                                    destination details. Features a fully responsive interface developed with Bootstrap
-                                    layout utilities, custom CSS components, and interactive features like client-side
-                                    form validation and dynamic UI elements powered by JavaScript.
+                                <div class="project-tech-stack mb-3">HTML5 • CSS3 • JavaScript</div>
+                                <p class="project-description mb-4">
+                                    A fully responsive tourism landing page with animations, hover effects, sliders,
+                                    transitions and interactive destination cards, plus mobile-friendly navigation.
                                 </p>
-
                                 <div class="project-badges d-flex flex-wrap gap-2 mb-4">
-                                    <span class="badge-pill pill-blue">Travel & Tourism</span>
+                                    <span class="badge-pill pill-blue">Travel &amp; Tourism</span>
                                     <span class="badge-pill pill-purple">Responsive Design</span>
-
                                 </div>
-
-                                <div class="project-action-link">
+                                <div class="project-action-link d-flex flex-wrap gap-4">
                                     <a href="https://tourism-management-system-launch.vercel.app/" target="_blank"
-                                        class="d-inline-flex align-items-center gap-2">
-                                        <i class="bi bi-box-arrow-up-right"></i> Visit Website
+                                        rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Anandchaturvedi100/Tourism-managementsystem"
+                                        target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-github"></i> GitHub
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 5. Careers Landing Page -->
+            <div class="row justify-content-center">
+                <div class="col-xl-11">
+                    <div class="project-showcase-card">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-6">
+                                <div class="project-preview-frame">
+                                    <!-- TODO: Images/careers-page.png me screenshot save karo -->
+                                    <img src="Images/careers-page.png" alt="MAHA-AKC Careers Landing Page"
+                                        class="img-fluid project-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 ps-lg-4">
+                                <h3 class="project-name mb-2">Careers Landing Page (MAHA-AKC Technology)</h3>
+                                <div class="project-tech-stack mb-3">HTML5 • CSS3 • JavaScript</div>
+                                <p class="project-description mb-4">
+                                    A responsive careers page built from scratch with semantic code, showing company
+                                    culture pillars and dynamic job listings from Front-End Designer to Web Consultant
+                                    roles.
+                                </p>
+                                <div class="project-badges d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge-pill pill-blue">Landing Page</span>
+                                    <span class="badge-pill pill-purple">Responsive Design</span>
+                                </div>
+                                <div class="project-action-link d-flex flex-wrap gap-4">
+                                    <a href="https://maha-akc-technology-git-main-akc-projects.vercel.app/"
+                                        target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/Anandchaturvedi100/MAHA-AKC-Technology"
+                                        target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2">
+                                        <i class="bi bi-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -354,43 +424,85 @@
         </div>
     </section>
 
-    <section class="education-certification-section py-5">
+        <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="exp-section-title d-inline-flex align-items-center gap-3">
+                    <i class="bi bi-briefcase text-primary"></i> Work Experience
+                </h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-10 d-flex flex-column gap-4">
+<div class="experience-card">
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+<div class="d-flex align-items-center gap-3">
+<div class="company-icon-wrapper"><i class="bi bi-building"></i></div>
+<div><h3 class="company-name mb-1">Coding Thinker</h3><div class="job-role">Junior React.js Frontend Developer &amp; Trainee</div></div>
+</div>
+<span class="date-badge">10/2025 – 04/2026 • Bhopal</span>
+</div>
+<ul class="achievement-list">
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Built responsive web apps using React.js, JavaScript (ES6+), HTML5 and CSS3</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Created reusable functional components using React Hooks</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Used Redux for state management in single-page applications</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Integrated REST APIs to fetch and display dynamic data</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Optimized UI for desktop, tablet and mobile; used Git and GitHub for collaboration</span></li>
+</ul>
+</div>
+<div class="experience-card">
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+<div class="d-flex align-items-center gap-3">
+<div class="company-icon-wrapper"><i class="bi bi-building"></i></div>
+<div><h3 class="company-name mb-1">Anudip Foundation</h3><div class="job-role">Trainee UI Developer</div></div>
+</div>
+<span class="date-badge">02/2025 – 08/2025 • Bhopal</span>
+</div>
+<ul class="achievement-list">
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Built responsive interfaces using HTML5, CSS3 and JavaScript (ES6+)</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Converted UI/UX designs into interactive, pixel-perfect web pages</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Built reusable React.js components for clean, maintainable UIs</span></li>
+<li><i class="bi bi-check-circle-fill check-icon"></i><span>Worked on real-world frontend projects using Git and GitHub</span></li>
+</ul>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-certification-section py-5" id="education">
         <div class="container">
             <div class="row g-5 justify-content-center">
 
-                <div class="col-lg-9 ">
-                    <div class="column-header mb-4 d- align-items-center gap-2 text-center">
+                <!-- Education -->
+                <div class="col-lg-9">
+                    <div class="column-header mb-4 text-center">
                         <i class="bi bi-mortarboard text-primary fs-3"></i>
-                        <h2 class=" section-block-title">Education</h2>
+                        <h2 class="section-block-title">Education</h2>
                     </div>
-
                     <div class="d-flex flex-column gap-3">
                         <div class="edu-cert-card">
-                            <h3 class="card-headline">Bachelor of Computer Applications (2020-2023)</h3>
+                            <h3 class="card-headline">Master of Computer Applications (2023-2025) • CGPA: 7.59</h3>
                             <div class="card-subtext d-flex align-items-start gap-2 mt-2">
                                 <i class="bi bi-building text-secondary mt-1"></i>
-                                <span>Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal,
-                                    Madhya Pradesh, India.</span>
+                                <span>Makhanlal Chaturvedi National University, Bhopal, Madhya Pradesh, India.</span>
                             </div>
                         </div>
-
                         <div class="edu-cert-card">
-                            <h3 class="card-headline">Master of Computer Applications (2023-2025)</h3>
+                            <h3 class="card-headline">Bachelor of Computer Applications (2020-2023) • CGPA: 8.55</h3>
                             <div class="card-subtext d-flex align-items-start gap-2 mt-2">
                                 <i class="bi bi-building text-secondary mt-1"></i>
-                                <span>Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal,
-                                    Madhya Pradesh, India.</span>
+                                <span>Makhanlal Chaturvedi National University, Bhopal, Madhya Pradesh, India.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Certification -->
                 <div class="col-lg-9">
-                    <div class="column-header mb-4 d- align-items-center gap-2 text-center">
+                    <div class="column-header mb-4 text-center">
                         <i class="bi bi-award text-purple fs-3"></i>
                         <h2 class="section-block-title">Certification</h2>
                     </div>
-
                     <div class="edu-cert-card mb-3 d-flex justify-content-between">
                         <div>
                             <h3 class="card-headline mb-3">Front End Development</h3>
@@ -398,26 +510,22 @@
                                 <i class="bi bi-check-circle-fill"></i> Completed with 86% grade
                             </span>
                         </div>
-                        <div>
-                            <div class="card-subtext d-flex align-items-start gap-1 mt-2 mb-3">
-                                <i class="bi bi-building text-secondary mt-1"></i>
-                                <span>Coursera </span>
-                            </div>
-                           
+                        <div class="card-subtext d-flex align-items-start gap-1 mt-2 mb-3">
+                            <i class="bi bi-building text-secondary mt-1"></i>
+                            <span>Coursera</span>
                         </div>
                     </div>
                     <div class="edu-cert-card d-flex justify-content-between">
                         <div>
-                        <h3 class="card-headline mb-3">Trainee UI Developer</h3>
-                        <span class="status-badge-green d-inline-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill"></i> Completed with 81% grade
-                        </span>
-                    </div>
+                            <h3 class="card-headline mb-3">Trainee UI Developer</h3>
+                            <span class="status-badge-green d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill"></i> Completed with 81% grade
+                            </span>
+                        </div>
                         <div class="card-subtext d-flex align-items-start gap-1 mt-2 mb-3">
-                            <i class="bi bi-building text-secondary mt-1 d-flex"></i>
+                            <i class="bi bi-building text-secondary mt-1"></i>
                             <span>Anudip Foundation</span>
                         </div>
-                       
                     </div>
                 </div>
 
@@ -425,8 +533,43 @@
         </div>
     </section>
 
+    <section class="py-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="column-header mb-4 text-center">
+                        <i class="bi bi-chat-dots text-primary fs-3"></i>
+                        <h2 class="section-block-title">Get in Touch</h2>
+                    </div>
+                    <div class="edu-cert-card">
+                        <p class="card-subtext mb-3">
+                            <i class="bi bi-envelope"></i> anandkumar78752@gmail.com &nbsp;|&nbsp;
+                            <i class="bi bi-telephone"></i> 6260915754 &nbsp;|&nbsp;
+                            <i class="bi bi-geo-alt"></i> Bangalore, Karnataka
+                        </p>
+                        <!-- TODO: formspree.io pe free form banao aur YOUR_FORM_ID replace karo -->
+                        <form action="https://formspree.io/f/mnpjnjzq" method="POST" class="d-flex flex-column gap-3">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            <textarea name="message" rows="4" class="form-control" placeholder="Your Message"
+                                required></textarea>
+                            <button type="submit" class="btn btn-primary btn-get-in-touch">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="portfolio-footer py-4">
         <div class="container text-center">
+            <div class="d-flex justify-content-center gap-4 mb-3 fs-4">
+                <a href="https://github.com/Anandchaturvedi100" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/anand-kumar-chaturvedi/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:anandkumar78752@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
             <p class="footer-copyright-text m-0">&copy; 2026 Anand Kumar Chaturvedi. All rights reserved.</p>
         </div>
     </footer>
@@ -434,9 +577,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-Frontend web developer Modern HTML CSS JavaScript
-
-Application Development with React and Bootstrap
 
 </html>
